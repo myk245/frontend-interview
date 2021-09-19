@@ -5,6 +5,7 @@ import "./App.css";
 
 const App = () => {
   const [selected, setSelected] = useState([]);
+  const [errorShown, setErrorShown] = useState(false);
   
   const submitForm = (event) => {
     event.preventDefault();
@@ -15,7 +16,8 @@ const App = () => {
   return (
     <main className="App">
       <h1 className="App-title">Risk Assessment</h1>
-      <div className="validation-error">You must select at least one value for each question</div>
+      {errorShown === true && <div className="validation-error">You must select at least one value for each question</div>}
+
         
       <form onSubmit={submitForm}>
         {questions.map((question) => (
