@@ -9,8 +9,10 @@ const App = () => {
   
   const submitForm = (event) => {
     event.preventDefault();
-    console.log(selected);
-    console.log(event.target);
+
+    setErrorShown(true);
+    // console.log(selected);
+    // console.log(event.target);
   }
 
   return (
