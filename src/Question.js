@@ -1,8 +1,8 @@
 import Choice from "./Choice";
 
-const Question = ({ question }) => {
-  console.log(question.choices)
-  
+const Question = ({ question, handleChange, selected }) => {
+  // console.log(question.choices)
+ 
   return (
     <div>
       <p>{question.text}</p>
@@ -10,10 +10,12 @@ const Question = ({ question }) => {
         {question.choices.map((choice) => {
           return (
             <Choice
+              handleChange={handleChange}
               name={question.id}
               value={choice.name}
               label={choice.label}
               key={choice.name}
+              checked={selected.includes(choice.name)}
             />
           );
         })}

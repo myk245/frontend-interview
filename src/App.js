@@ -15,6 +15,19 @@ const App = () => {
     // console.log(event.target);
   }
 
+  const handleChange = (event) => {
+    console.log(event.target.checked)
+    const selectedChoice = event.target.value;
+
+    let updatedSelected = selected.filter(choice => choice !== selectedChoice);
+
+    if (event.target.checked) {
+      updatedSelected.push(selectedChoice);
+    }
+    setSelected(updatedSelected);
+  }
+
+  console.log(selected)
   return (
     <main className="App">
       <h1 className="App-title">Risk Assessment</h1>
@@ -24,7 +37,10 @@ const App = () => {
       <form onSubmit={submitForm}>
         {questions.map((question) => (
           <Question
-            key={question.id} question={question}
+            key={question.id}
+            question={question}
+            handleChange={handleChange}
+            selected={selected}
           />
         ))}
         <div>

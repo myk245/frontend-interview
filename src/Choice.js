@@ -1,8 +1,17 @@
-const Choice = ({ name, value, label }) => (
-  <label>
-    <input name={name} type="checkbox" value={value} />
-    {label}
-  </label>
-);
+import { SelectAllRounded } from "@material-ui/icons";
+
+const Choice = ({ name, value, label, handleChange, selected }) => {
+  return (
+    <label>
+      <input
+        name={name}
+        type="checkbox"
+        value={value}
+        onChange={handleChange}
+      />
+      {label}
+    </label>
+  );
+}
 
 export default Choice;
