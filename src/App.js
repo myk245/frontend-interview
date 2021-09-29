@@ -38,8 +38,8 @@ const App = () => {
     setSelectedCategories(updatedSelectedCategories);
   }
 
-  console.log(selected)
-  console.log(selectedCategories)
+  // console.log(selected)
+  // console.log(selectedCategories)
 
   return (
     <main className="App">
@@ -47,7 +47,6 @@ const App = () => {
       {errorShown === true && <div className="validation-error">You must select at least one value for each question</div>}
       {submissionSuccess === true && <div className="validation-success">Thank you!</div>}
 
-        
       <form onSubmit={submitForm}>
         {questions.map((question) => (
           <Question
@@ -58,7 +57,7 @@ const App = () => {
           />
         ))}
         <div>
-          <button type="submit">Next</button>
+          <button type="submit" className="button">Next</button>
         </div>
       </form>
       
