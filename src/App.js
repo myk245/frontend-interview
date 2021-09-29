@@ -6,9 +6,16 @@ import "./App.css";
 const App = () => {
   const [selected, setSelected] = useState([]);
   const [errorShown, setErrorShown] = useState(false);
+  const [familySubstanceAbuse, setFamilySubstanceAbuse] = useState([]);
+  const [personalSubstanceAbuse, setPersonalSubstanceAbuse] = useState([]);
+  const [psychologicalDiseases, setPsychologicalDiseases] = useState([]);
   
   const submitForm = (event) => {
     event.preventDefault();
+
+    // if () {
+      
+    // }
 
     setErrorShown(true);
     // console.log(selected);
@@ -16,7 +23,8 @@ const App = () => {
   }
 
   const handleChange = (event) => {
-    console.log(event.target.checked)
+    console.log(event.target.checked);
+    console.log(event.target.name); // question category
     const selectedChoice = event.target.value;
 
     let updatedSelected = selected.filter(choice => choice !== selectedChoice);

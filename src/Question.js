@@ -1,7 +1,7 @@
 import Choice from "./Choice";
 
 const Question = ({ question, handleChange, selected }) => {
-  // console.log(question.choices)
+  // console.log(question.id)
  
   return (
     <div>

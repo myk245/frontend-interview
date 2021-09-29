@@ -44,7 +44,7 @@ Now you can run the tests and watch them fail!
 Now to complete the pre-interview part tasks:
 
 - [X] add enough code to make the test pass
-- [ ] Email your interviewer with [patch file(s)](https://thoughtbot.com/blog/send-a-patch-to-someone-using-git-format-patch) containing your changes.
+- [X] Email your interviewer with [patch file(s)](https://thoughtbot.com/blog/send-a-patch-to-someone-using-git-format-patch) containing your changes.
 
 We will review your code as a team, and reach back out to you to set up a pairing session
 
