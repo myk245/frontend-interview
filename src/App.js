@@ -7,15 +7,16 @@ const App = () => {
   const [selected, setSelected] = useState([]);
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [errorShown, setErrorShown] = useState(false);
+  const [submissionSuccess, setSubmissionSuccess] = useState(false);
   
   const submitForm = (event) => {
     event.preventDefault();
 
     if (selected.length < 3 || selectedCategories.length < 3) {
       setErrorShown(true);
+    } else {
+      setSubmissionSuccess(true);
     }
-    // console.log(selected);
-    // console.log(event.target);
   }
 
   const handleChange = (event) => {
@@ -44,6 +45,7 @@ const App = () => {
     <main className="App">
       <h1 className="App-title">Risk Assessment</h1>
       {errorShown === true && <div className="validation-error">You must select at least one value for each question</div>}
+      {submissionSuccess === true && <div className="validation-success">Thank you!</div>}
 
         
       <form onSubmit={submitForm}>

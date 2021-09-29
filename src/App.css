@@ -8,3 +8,10 @@
   font-weight: bold;
   padding: 7px;
 }
+
+.validation-success {
+  width: 40%;
+  border: 1px solid green;
+  font-weight: bold;
+  padding: 7px;
+}
