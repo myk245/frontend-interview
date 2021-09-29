@@ -1,6 +1,6 @@
 import { SelectAllRounded } from "@material-ui/icons";
 
-const Choice = ({ name, value, label, handleChange, selected }) => {
+const Choice = ({ name, value, label, handleChange}) => {
   return (
     <label>
       <input
